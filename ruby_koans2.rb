@@ -5,4 +5,5 @@ class AboutNil < Neo::Koan
 
   #nil is an object, in ruby every value is an object it is an example of NilClass: 1
   #unklike null in JS for example which has no value, is undefined & not an object
-  
+
+#nil is an object & has a value 

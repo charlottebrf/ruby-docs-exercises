@@ -148,3 +148,68 @@ guess = gets.to_i
 puts guess < target
 
 #5
+#conditional statements -if not true then skipped
+#conditionals rely on a Boolean expression
+#if 1 < 2
+#puts "It's true!"
+#end
+#boolean negation operator, ! which lets you take a a true value & make it false & vice versa
+#not does basically the same thing
+#if need to ensure both true && operator
+#if either true use the || (or) operator
+
+if 1 == 1
+  puts "I'll be printed!"
+end
+
+if 1 >= 2
+  puts "I won't!"
+end
+
+if 2 <= 2
+  puts "I'll be printed!"
+end
+
+if 1 > 2
+  puts "I won't!"
+end
+
+if 1 < 2
+  puts "I'll be printed!"
+end
+
+if 2 != 2
+  puts "I won't!"
+end
+
+if ! true
+  puts "I won't be printed!"
+end
+
+if ! false
+  puts "I won't"
+end
+
+if true && true
+  puts "I'll be printed"
+end
+
+if true && false
+  puts "I won't"
+end
+
+if not true
+  pus "I won't be printed!"
+end
+
+if not false
+  puts "I will!"
+end
+
+if false || true
+  puts "I'll be printed"
+end
+
+if false || false
+  puts "I won't"
+end 

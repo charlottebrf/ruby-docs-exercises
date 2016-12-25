@@ -106,5 +106,5 @@ puts "Welcome, #{name}!"
 puts "I've got a random number between 1 and 100"
 puts "Can you guess it?"
 target = rand(100) + 1
-
+#uses target to store value 
 #3

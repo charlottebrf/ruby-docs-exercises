@@ -127,3 +127,24 @@ num_guesses = 0
 
 puts "You've got #{10 - num_guesses} guesses left."
 #easier to use #{...} means we can get rid of the to_s call
+
+#4
+#gets method retrieves input from the user
+#can't use gets by itself to get a number from the user, because it returns a string
+#need to convert the string returned from gets to a number, to compare playser's guess
+#to target number
+#t_i method converts string to number
+
+print "Make a guess:"
+guess = gets.to_i
+
+#no need to put string in a variable first; use dot operator to call the method directly
+#on the return value - to_i ignores any non-numeric characters that follow the number
+#to_a string
+#to_i integer
+#to_f floating-point number
+
+
+puts guess < target
+
+#5

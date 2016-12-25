@@ -45,7 +45,11 @@ input = gets
 #gets method reads a line from standard input - doesn't usually need any arguments
 #definitely NO parenthesis for a mehod with no argument
 
-#puts "Welcome, #{input}!"
+name =input.chomp
+#added to get rid of \n
+
+puts "Welcome, #{name}!"
+#asign input to a new variable .chomp to clean up line
 
 #interpolating a value into a string
 #last thing script does is call pus with one more script
@@ -62,7 +66,8 @@ input = gets
 #puts input.inspect
 #inspect method is available on any ruby object
 
-p input
+#p input
+
 #printing the result of input is so common that it uses a p method
 #this works like puts, except that it calls inspect on each argument before printing
 #identical to above code
@@ -77,9 +82,29 @@ p input
 #\t - tab
 #\" - double-quotes
 #\' -single-quotes
-#\\ -backslasg
+#\\ -backslash
 
-#
+#puts "\"It's okay,\"he said." for double quotes need an escape
+#puts "One backslack: \\"
+#In single quoted strings escape sequences treated literally
 
+#chomp method removes newline character- great for cleaning up strings returned
+#from gets- can only be used on individual string objects
+#string referenced by the input variable is the receiver of the chomp method - using dot operator
 
 #2
+#not all methods can be used on a number e.g. .upcase
+#methods that can be used on a number or string are shown using .method
+#different methods can be used depending on an object's class
+#class is a blueprint for making new objects & decides what methods you can call
+#on the object
+
+#class is also a method that let's objects tell us what their class is
+#e.g. Fixnum (42); string ("heya"); TureClass (true)
+
+#rand method -generate a random method within a given range
+puts "I've got a random number between 1 and 100"
+puts "Can you guess it?"
+target = rand(100) + 1
+
+#3

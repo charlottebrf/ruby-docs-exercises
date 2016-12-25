@@ -113,6 +113,13 @@ target = rand(100) + 1
 
 num_guesses = 0
 
+guessed_it = false
+
+#while num_guesses < 10 && guessed_it == false
+
+until num_guesses == 10 || guessed_it
+#loop will stop after the player's 10th guess, or when they guess correctly
+
 #concatenate (join) the strings together using the plus sign (+)
 #remaining_guesses = 10 - num_guesses
 #puts remaining_guesses + " guesses left."
@@ -145,7 +152,7 @@ guess = gets.to_i
 #to_f floating-point number
 
 
-puts guess < target
+#puts guess < target
 
 #5
 #conditional statements -if not true then skipped
@@ -158,58 +165,71 @@ puts guess < target
 #if need to ensure both true && operator
 #if either true use the || (or) operator
 
-if 1 == 1
-  puts "I'll be printed!"
+#compare the guess to the target
+#print the appropriate message
+
+num_guesses += 1
+
+if guess < target
+  puts "Oops. Your target was LOW"
+
+elsif guess > target
+  puts "Oops. Your target was HIGH"
+
+elsif gues == target
+  puts "Good job, #{name}!"
+  puts "You guessed my number in #{num_guesses} guesses!"
+  guessed_it = true
 end
 
-if 1 >= 2
-  puts "I won't!"
 end
 
-if 2 <= 2
-  puts "I'll be printed!"
-end
+#If player ran out of turns, tell them what the number was.
 
-if 1 > 2
-  puts "I won't!"
+#if not guessed_it
+unless guessed_it
+  puts "Sorry. You didn't get my number. (It was #{target}.)"
 end
+#Ruby has an additional key word: unless
+#code within an if statement executes only if a condition is true
+#but code within an unless statemnt executes only if condition is false
 
-if 1 < 2
-  puts "I'll be printed!"
-end
+#unless true
+#  puts "I won't be printed!"
+#end
 
-if 2 != 2
-  puts "I won't!"
-end
+#unless false
+#  puts "I will!"
+#end
 
-if ! true
-  puts "I won't be printed!"
-end
+#unless makes it a bit easier to read
 
-if ! false
-  puts "I won't"
-end
+#if ! (light == "red")
+#  puts "Go!"
+#end
 
-if true && true
-  puts "I'll be printed"
-end
+#unless light == "red"
+#puts "Go!"
+#end
 
-if true && false
-  puts "I won't"
-end
+#6
+#the code to prompt for a guess is already in place, use a loop to play it more
+#than once
+#use a loop to execute a segment of code repeatedly - place inside a loop
 
-if not true
-  pus "I won't be printed!"
-end
+#while loop
+#number = 1
+#start_of_the_loop - condition
+#while number <= 5
+#loop_body
+# puts number
+# number += 1
+#end
 
-if not false
-  puts "I will!"
-end
-
-if false || true
-  puts "I'll be printed"
-end
-
-if false || false
-  puts "I won't"
-end 
+#until loop as a counterpart to while
+#An until loop repeats until condition is true (it loops, while false)
+#number = 1
+#while number > 5
+# puts number
+# number += 1
+#end

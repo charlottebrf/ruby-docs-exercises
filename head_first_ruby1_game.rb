@@ -106,5 +106,24 @@ puts "Welcome, #{name}!"
 puts "I've got a random number between 1 and 100"
 puts "Can you guess it?"
 target = rand(100) + 1
-#uses target to store value 
+#uses target to store value
+
+
 #3
+
+num_guesses = 0
+
+#concatenate (join) the strings together using the plus sign (+)
+#remaining_guesses = 10 - num_guesses
+#puts remaining_guesses + " guesses left."
+#however + operator is used to add numbers as well as to concatenate strings
+#since remaining_guesses contains a number this plus sign looks like an attempt
+#to add numbers
+#need to convert the number to a string use a .to_s method to call conversion
+
+#remaining_guesses = 10 - num_guesses
+#puts remaining_guesses.to_s + " guesses left."
+#makes it clear doing concatenation, not addition
+
+puts "You've got #{10 - num_guesses} guesses left."
+#easier to use #{...} means we can get rid of the to_s call

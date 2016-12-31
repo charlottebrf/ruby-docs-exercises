@@ -25,7 +25,7 @@
 puts "Welcome to 'Get my Number!'"
 #A call to the "puts" method
 
-print "What's your name?"
+print "What's your name? "
 
 #puts short for "put string"-
 #print method works just like puts, except puts adds a newline character at the
@@ -176,7 +176,7 @@ if guess < target
 elsif guess > target
   puts "Oops. Your target was HIGH"
 
-elsif gues == target
+elsif guess == target
   puts "Good job, #{name}!"
   puts "You guessed my number in #{num_guesses} guesses!"
   guessed_it = true

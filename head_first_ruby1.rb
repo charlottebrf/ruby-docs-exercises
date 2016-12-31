@@ -12,6 +12,10 @@ print 2 ** 3
 # > greater than
 # == checks to see if the two values are equal
 
+#integers
+#can use underscore _ to show 1000, e.g 1_234.56
+#A number is defined by a series of digits, using a dot as a decimal mark, and optinally an underscore as a thousands separator.
+
 puts "strings"
 #ruby's strings are special because even very large strings are highly efficient to
 #work with (isn't true in many other languages)
@@ -65,3 +69,27 @@ puts "everyhing is an object!"
 #"hello"     .                 upcase
 #-32         .                 abs
 #file        .                 read
+
+
+
+#Variable names can be re-used, and re-assigned.
+
+number = 4
+number = number * 3
+puts number + 2
+
+# Using variable names can be useful to break up long lines and make code more expressive and readable.
+
+# On formatting: Note that there are spaces around the assignment operator `=` as well as the arithmetical operators `+` and `*`.
+
+number = 2 + 3 * 4
+puts number
+
+#Data types
+
+#Numbers
+#Strings (texts)
+#True, False, and Nil
+#Symbols
+#Arrays
+#Hashes

@@ -31,3 +31,9 @@
 #example- dog class
 #Instance variables (state): name, age
 #Instance methods (behaviour): talk, move, report_age
+
+#RubyMonstas
+#Classes are like ideas, objects are concrete things, manifestations of their ideas.
+
+
+#“[Smalltalk’s] way of making objects is quite Platonic in that some of them act as […] Ideas from which manifestations can be created. That the Ideas are themselves manifestations (of the Idea-Idea) and that the Idea-Idea is a-kind-of Manifestation-Idea — which is a-kind-of itself, so that the system is completely self-describing — would have been appreciated by Plato as an extremely practical joke.” — Alan C. Kay

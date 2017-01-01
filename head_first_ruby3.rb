@@ -91,4 +91,78 @@ truck = Truck.new
 truck.load_bed("259 bouncy balls")
 puts "The truck is carrying #{truck.cargo}"
 
-#subclasses keep inherited methods alongside new ones 
+#subclasses keep inherited methods alongside new ones
+
+#Exercises
+
+class Kite
+
+attr_accessor :fly
+attr_accessor :land
+
+def fly (airline)
+  puts "You're flying with #{airline}!"
+  @fly = airline
+end
+
+def land (airport)
+  puts "You're landing at #{airport}!"
+  @land = airport
+end
+
+end
+
+class Stuntkite < Kite
+
+  attr_accessor :steer
+
+  def steer (pilot)
+    puts "Please steer carefully #{pilot}"
+    @steer = pilot
+  end
+
+end
+
+
+#instance variables belong to the object not the class!
+
+car = car.new
+puts car.instance_variables
+#testing this there are no instance variables
+
+car.odomoter = 22914
+car.gas_used = 728
+puts car.instance_variables
+
+#car inherited the instance methods not the instance variables
+
+#Instance variables belong to the object, not the class!
+#important becuase if you deviate from your instance variable names matching your accessor method names then the subclass can interfere with its superclass functionality by overriding its instance variables.
+#if instance variables are the same then they can write over one another
+#use sensible variables names that match your attribute accessor names
+
+#Overriding methods
+#If the superclass's behaviour isn't what you need in the subclass, inheritance gives you another mechanism to help: method overriding. Replaces one or more methods in a subclass, replace the inherited methods from the superclass with methods specific to the subclass.
+
+class Motorcycle < Vehicle
+  def steer
+    puts "Turn front wheel."
+  end
+end
+
+motorcyle.steer #Turn front wheel
+
+#if we call any other methods on motorcyle we'll get the inherited mehod, if a subclass needs specialised behaviour it can simply override the method it inherited from the superclass.
+
+
+#subclass of a subclass can be possible- but can become overly complex 
+
+class Car < Vehicle
+end
+
+class DragRacer < Car
+  def accelerate
+    puts "Inject nitrous!"
+  end
+
+end

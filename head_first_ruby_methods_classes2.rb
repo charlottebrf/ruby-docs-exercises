@@ -39,4 +39,4 @@
 #“[Smalltalk’s] way of making objects is quite Platonic in that some of them act as […] Ideas from which manifestations can be created. That the Ideas are themselves manifestations (of the Idea-Idea) and that the Idea-Idea is a-kind-of Manifestation-Idea — which is a-kind-of itself, so that the system is completely self-describing — would have been appreciated by Plato as an extremely practical joke.” — Alan C. Kay
 
 
-#Encapsulation
+#Encapsulation (see animals)

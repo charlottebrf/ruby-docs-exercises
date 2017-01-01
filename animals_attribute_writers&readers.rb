@@ -223,3 +223,45 @@ class Dog
   end
 
 end
+
+#Ensuring data is valid with accessors
+#need to add some simple data validation to the methods, to give an error any time invalid value is passed in
+
+
+class Dog
+
+  attr_reader :name, :age
+  #we only define the reader methods automatically as we're defining writer methods
+
+  def name= (value)
+  if value == ""
+    raise "Name can't be blank!"
+  end
+    #puts "Name can't be blank!"
+  #else
+    @name = value
+  end
+    #this statement won't be reached if raise is called
+
+#if the name is blank, print an error message
+#set the instance variableonly if the name is validation
+
+def age= (value)
+  if value > 0
+    raise "An age of #{value} isn't valid!"
+  end
+    #puts "An age of #{value} isn't valid!"
+    @age = value
+  end
+  #this statement won't be reached if raise is called
+
+#if age is negative, print an error message
+#set the instance variable only if the age is valid
+
+def report_age
+  puts "#{@name} is #{@age} years old."
+end
+
+end
+
+#using raise in our attribute writer methods allows to report if invalid answers are given

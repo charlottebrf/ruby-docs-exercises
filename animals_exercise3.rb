@@ -1,4 +1,9 @@
+#When you deine a new class, Ruby implicitly sets a class called Object as its superclass, unless you specify a superclass yourself.
+
 class Animal
+  #this is equivalent to class Animal < Object
+  #therefore class Dog < Animal inherits from Animal which means from Object
+  #almost every Ruby object directly or indirectly has Object as its superclass - so we can call useful methods e.g: to_s (converts an object to a string for printing), inspect (converts an object to debug string), class (tells you which class an object is an instance of), methods (tells you what instance methods an object has), instance_variables (gives you a list of an object's instance variables).
 
   attr_reader :name, :age
 
@@ -32,6 +37,9 @@ class Animal
 end
 
 class Dog < Animal
+
+  def to_s
+    "#{@name} the dog, age #{age}"
 end
 
 class Bird < Animal
@@ -79,3 +87,7 @@ whiskers.talk
 dillon = Armadillo.new
 dillon.name = "Dillon"
 dillon.move("burrow")
+
+lucy = Dog.new
+lucy.name = "Lucy"
+lucy.age = 4

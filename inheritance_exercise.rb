@@ -13,7 +13,7 @@ class Camera
 end
 
 #Subclass
-class DigitalCamera < camera
+class DigitalCamera < Camera
 
 attr_accessor :load
 

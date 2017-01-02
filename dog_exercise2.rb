@@ -1,6 +1,8 @@
 class Dog
 
   attr_reader :name, :age
+  #creates methods to get current value of @name @age
+
 
   def name= (value)
     if value == ""
@@ -15,18 +17,20 @@ class Dog
     end
     @age = value
   end
-
-  def move (destination)
-    puts "#{@name} runs to the #{destination}"
-  end
+  #we create our own attribute writer nethods, so we can check that the new values are valid.
 
   def talk
     puts "#{@name} says Bark!"
   end
 
+  def move (destination)
+    puts "#{@name} runs to the #{destination}"
+  end
+
   def report_age
     puts "#{@name} is #{@age} years old"
   end
+#other instance methods for our Dog objects 
 
 end
 

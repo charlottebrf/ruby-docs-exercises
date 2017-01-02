@@ -52,12 +52,14 @@ class Armadillo < Animal
 
   def move (destination)
     puts "#{@name} unrolls!"
-    puts "#{@name} runs to the #{destination}."
+    super (destination)
+    #explictly specifies the argument- can also leave off (destination)
+    #adds in super-powered sublass for Armadillo
   end
 
 end
 #This works but it's unfortunate to have to replicate the code from the move method with new code?
-#the "super" keyword 
+#the "super" keyword (see explanation in inheritance3_super_keyword.rb
 
 #Overrding a method in the Animal subclasses
 
@@ -73,3 +75,7 @@ polly.age = 2
 polly.report_age
 fido.name("yard")
 whiskers.talk
+
+dillon = Armadillo.new
+dillon.name = "Dillon"
+dillon.move("burrow")

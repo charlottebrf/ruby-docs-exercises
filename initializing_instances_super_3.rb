@@ -19,11 +19,11 @@ class PowerBoat < boat
 end
 
 
-
 #sample code
-boat = PowerBoat.new("Guppy", "outboard")
-boat.info
+#boat = PowerBoat.new("Guppy", "outboard")
+#boat.info
 
 
 #what we know: boat name, motor type type -instance variables
+
 #what we do: print name, print boat type  -instance methods

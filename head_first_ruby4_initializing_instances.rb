@@ -31,19 +31,21 @@ class Employee
   end
 
   def initialize (name = "Anonymous", salary = 0.0)
-    @name = name
-    @salary = salary
+    self.name = name #making calls to the attribute writer methods, not assigning to variables
+    self.salary = salary
   end
   #setting the @name & @salary instance variables - now an initialize method is set up already set up for new Employee instance, safe to call print_pay_stub on them
   #sets a defaul of Anonymous & 0 -use name parameter to set @name isntance variable, use salary parameter to set @salary instance variable
   #Be careful not pass new arguments to new - will be no arguments to forward on to initialize
-  #Can have best of both worlds to initialize in an ordinary method to utilize feaures of an ordinary method with optional parameters- allows you to call both employee.new & specific names of employees also. 
+  #Can have best of both worlds to initialize in an ordinary method to utilize feaures of an ordinary method with optional parameters- allows you to call both employee.new & specific names of employees also.
+  #using self. states that we definitely want to make a call to the "name" method & "salary" method
+  #means that the validation code works without duplicating code
 
   def print_pay_stub
-    puts "Name: #{@name}"
-    pay_for_period = (@salary / 365.0) * 14
+    puts "Name: #{name}"
+    pay_for_period = (salary / 365.0) * 14 #could use self.salary & self & self.name but self is optional here & works wihout them
     formatted_pay = format("%.2f", pay_for_period) #get a string with pay amount rounded to 2 decimal places
-    puts "Pay This Period: $#{formatted_payd}" #print formatted string amount
+    puts "Pay This Period: $#{formatted_pay}" #print formatted string amount
   end
   #instance method
 
@@ -142,4 +144,30 @@ end
 
 end
 
-MyClass.new("hello") #=> Setting up new insance!
+MyClass.new("hello") #=> Setting up new instance!
+
+#DRY method = Don't Repeat Yourself
+
+#Version 3
+class Myclass
+
+  def first_method
+    puts "Current instance within first_method: #{self}"
+    self.second_method
+  end
+
+  def second_method
+    puts "Current instance within second_method: #{self}"
+  end
+end
+#Within instance methods the keyword self refers to the current object
+
+my_object = MyClass.new
+#puts "my_object refers to this object: #{my_object}"
+my_object.first_method
+
+
+#can also use self with the dot operator to call a second instance
+#Self keyword- has to be included when calling attribute writer methods, or Ruby will mistake the = for a variable assignment
+#For any other kind of instance method call, you can leave self off
+#If you don't specify a receieved using the dot operator, the receiver defaults to the current object, self

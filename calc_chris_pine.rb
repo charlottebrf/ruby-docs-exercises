@@ -35,7 +35,6 @@ puts 31 * ((3600.00 * 24) * 365.00)
 #puts (30 * 365 * 24 * 60 * 60) + (272 * 24 * 60 * 60) + (21 * 60 * 60) + (45 * 60) -Chris Pine example answer, crosscheck against mine 
 
 
-
 #How many chocolates do you hope to eat in your life program
 puts 85 * (20.00 * 365.00)
 #my estimated life span • how many chocolates I'd like to eat in a year

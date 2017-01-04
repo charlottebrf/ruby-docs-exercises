@@ -127,4 +127,24 @@ end
 
 take_this { |thing| puts "braces block got #{thing}"}
 
-#ruby blocks that fit on a single line should be surrounded with curly braces. Blocks that span multiple lines should be surrounded with do...end. Common convention, though not the only one. 
+#ruby blocks that fit on a single line should be surrounded with curly braces. Blocks that span multiple lines should be surrounded with do...end. Common convention, though not the only one.
+
+#method handles the general work needed on a variety of tasks
+#block handles the logic specific to an individual task
+
+#each method
+
+#each method loops through each of the items in an array, yielding them to a block one at a time
+
+def my_method
+  yield 1
+  yield 2
+  yield 3
+end
+
+my_method { |param| puts param} #123
+
+["a", "b", "c"].each { |param| puts param}  #abc
+#each is similar to a while loop - key difference is we yield the elements to a black rather than an array - we pass the element to a block
+
+#use each method & a block to process each of the items in an array 

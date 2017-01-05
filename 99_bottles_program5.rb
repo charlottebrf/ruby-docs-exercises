@@ -36,7 +36,7 @@ bottle_of_beer(8)
 #bottle_of_beer(99)
 
 #Version 3- Chris Pine's full solution of the song from 1-99
-#Note to self improve on while, if & else !
+#Note to self improve on while, if & else ! My error was also misinterpreting the task to be like a game where you get.chomp responses rather than printing & iterating from 99-1 as a while loop the entire lyrics...
 
 bottles = 99
 while bottles != 0

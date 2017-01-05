@@ -1,13 +1,25 @@
 #Write a program that prints lyrics to "99 Bottles of Beer on the Wall"
 
-bottle_of_beer = 0
+#def bottle_of_beer(number)
+  number = gets.chomp
+  if number >= 1
+    puts "#{number} bottles of beer on the wall, #{number} bottles of beer"
+  end
+end 
 
-while (bottle_of_beer >= 1 and bottle_of_beer <= 99)
-  puts "#{bottle_of_beer} bottles of beer on the wall, 99 bottles of beer"
-  bottle_of_beer = gets.chomp
-  new_bottle_of_beer = bottle_of_beer - 1
-  puts "Take one down and pass it around, #{new_bottle_of_beer} bottles of beer on the wall."
-end
+#bottle_of_beer(0)
+
+#while bottle_of_beer >= 1 && bottle_of_beer <= 99
+  #this is wrong -need to work out what's specifcally wrong here
+#  puts "#{bottle_of_beer} bottles of beer on the wall, #{bottle_of_beer} bottles of beer"
+#  bottle_of_beer = gets.chomp
+#end
+
+#new_bottle_of_beer = bottle_of_beer - 1
+
+#while new_bottle_of_beer >= 1 && bottle_of_beer <= 99
+#  puts "Take one down and pass it around, #{new_bottle_of_beer} bottles of beer on the wall."
+#end
 
 #bottle_of_beer(99)
 

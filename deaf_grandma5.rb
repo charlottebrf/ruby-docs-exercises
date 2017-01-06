@@ -5,3 +5,35 @@
 #Hint 2: Try to think about what parts of your program should happen over and over again. All of those should be in your while loop.
 
 #Extend your Deaf Grandma program: What if grandma doesn't want you to leave? When you shout BYE, she could pretend not to hear you. Change your previous program so that you have to shout BYE three times in a row. Make sure to test your program: if you shout BYE three times, but not in a row, you should still be talking to grandma.
+
+#Planning program version 1
+#puts "Your comment to grandma"
+#gets.chomp
+#if capitals
+#grandma puts "NO, NOT SINCE (randomly generated year between 1930-1950! Starts with 1938!"- srand)- this should be in a while loop
+#else if lower case grandma puts HUH?!  SPEAK UP, SONNY!
+#else  (?) "BYE" with an Enter to exit the program
+
+#greeting = " "
+
+def deaf_grandma
+  puts greeting
+  greeting = gets.chomp
+  if greeting == greeting.capitalize
+    while greeting != greeting.downcase
+    puts "NO, NOT SINCE " + rand(101).to_s + " !"
+    #puts "NO, NOT SINCE " + rand(1930-1950).to_s + " ."
+    greeting.gets.chomp
+    end
+  else
+    if greeting == greeting.downcase
+    while greeting != greeting.capitalize
+    puts "HUH?! SPEAK UP, SONNY!"
+    greeting.gets.chomp
+  end
+  else greeting == "BYE"
+    puts "BYE!"
+  end
+end
+
+greeting = " "

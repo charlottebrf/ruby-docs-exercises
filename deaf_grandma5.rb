@@ -16,21 +16,18 @@
 
 #greeting = " "
 
-def deaf_grandma
+def deaf_grandma(greeting)
   puts greeting
-  greeting = gets.chomp
+  #greeting = gets.chomp
   if greeting == greeting.capitalize
-    while greeting != greeting.downcase
     puts "NO, NOT SINCE " + rand(101).to_s + " !"
+    while greeting != greeting.downcase
     #puts "NO, NOT SINCE " + rand(1930-1950).to_s + " ."
     greeting.gets.chomp
-    end
-  else
-    if greeting == greeting.downcase
-    while greeting != greeting.capitalize
+  elsif greeting == greeting.downcase
     puts "HUH?! SPEAK UP, SONNY!"
+    while greeting != greeting.capitalize
     greeting.gets.chomp
-  end
   else greeting == "BYE"
     puts "BYE!"
   end
